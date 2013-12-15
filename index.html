@@ -21,7 +21,7 @@
 			function split(){
 				var line = input.value.split('\n');
 				for (var i in line) {
-					line[i] = line[i].replace(/([０-９]+([－―][０-９]+)+)([^１-９]*)?/,",$1,$3,");
+					line[i] = line[i].replace(/([０-９]+([－―][０-９]+)*)([^１-９]*)?/,",$1,$3,");
 				}
 				console.debug(line.join('\n'));
 				output.value = line.join('\n');
